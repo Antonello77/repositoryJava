@@ -6,9 +6,10 @@ public class PowerWhile {
 		 int numero = 2;
 			int power= 16;
 			int i=0;
-			while(i<1) {
-				int result= numero * power;
-				System.out.println( result);
+			
+			while(i<15) {
+				power= numero * power;
+				System.out.println( power);
 			   i++;
 				
 			}
