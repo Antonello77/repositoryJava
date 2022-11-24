@@ -36,11 +36,16 @@ public class Day {
 		default:
 			giorno = "inserire  numero da 1 a 7";
 		}
+		
+		
+		 
+		
 		if (giorno == "inserire  numero da 1 a 7") {
 			System.out.println(giorno);
 		} else {
 			System.out.println(num + "=" + giorno);
 		}
+		
 	}
 
 
