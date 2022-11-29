@@ -3,21 +3,7 @@ import java.util.Scanner;
 
 public class BubbleSortArray {
 
-    static void bubbleSort(int[] arr) {
-        int n = arr.length;
-        int temp = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 1; j < (n - i); j++) {
-                if (arr[j - 1] > arr[j]) {
-                    temp = arr[j - 1];
-                    arr[j - 1] = arr[j];
-                    arr[j] = temp;
-                }
 
-            }
-        }
-
-    }
 
     public static void main(String[] args) throws Exception, InputMismatchException {
         // TODO Auto-generated method stub
@@ -29,7 +15,7 @@ public class BubbleSortArray {
         int arr[] = new int[10];
         
         try {
-        System.out.println("inserisci 10 valori interi: ");
+        System.out.println("inserisci 10 numeri interi: ");
         for (int i = 0; i < 10; i++) {
 
             num = input.nextInt();
@@ -52,5 +38,22 @@ public class BubbleSortArray {
         }
 
     }
+    
+    static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        int temp = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j < (n - i); j++) {
+                if (arr[j - 1] > arr[j]) {
+                    temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = temp;
+                }
+
+            }
+        }
+
+    }
+    
 }
 
