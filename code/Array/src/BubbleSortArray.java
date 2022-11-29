@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class BubbleSortArray {
@@ -18,21 +19,32 @@ public class BubbleSortArray {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception, InputMismatchException {
         // TODO Auto-generated method stub
 
         Scanner input = new Scanner(System.in);
+       
         int num;
 
         int arr[] = new int[10];
+        
+        try {
         System.out.println("inserisci 10 valori interi: ");
         for (int i = 0; i < 10; i++) {
 
             num = input.nextInt();
             arr[i] = num;
-
         }
-
+        }
+     
+        catch(InputMismatchException e){
+        	System.out.println("error: "+ e);
+        	System.out.println("rispetta i parametri");
+        }
+        catch(Exception e) {
+			System.out.println("error: "+ e);
+		}
+        
          bubbleSort(arr);
         System.out.println("Bubble Sort");
         for (int i = 0; i < arr.length; i++) {
@@ -41,3 +53,4 @@ public class BubbleSortArray {
 
     }
 }
+
